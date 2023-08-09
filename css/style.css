@@ -1,0 +1,963 @@
+/*  colors  */
+:root{
+    --primary: #EEBF00;
+    --secondary: #232B38;
+    --ternary: #6c6c6c;
+    --danger: #FE4545;
+    --pure: #FEFEFE;
+    --light: #F0F0F0;
+    --heaven: #FFFFFF;
+    --footer: #2D333F;
+    --newcolor: #330000;
+}
+/*  ------------------FONTS START-------------------------- */
+@font-face{
+    font-family: "raleway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face{
+    font-family: "raleway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face{
+    font-family: "raleway-bold";
+    src: url(../fonts/Raleway-bold.ttf);
+}
+
+@font-face{
+    font-family: "raleway-extrabold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+
+@font-face{
+    font-family: "raleway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: "raleway-black";
+    src: url(../fonts/Raleway-Black.ttf);
+}
+
+@font-face{
+    font-family: "raleway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+/*-------------------FONTS END-----------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    font-family: "raleway-regular";
+}
+
+/*------------------------------------utility-store start-----------------------------------------------*/
+.flex{
+    display: flex;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+.magic-shadow{
+    position: relative;
+    background-color: var(--heaven);
+}
+.magic-shadow:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -21px;
+    z-index: -1;
+}
+.magic-shadow-sm{
+    position: relative;
+    background-color: var(--heaven);
+}
+.magic-shadow-sm:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow-sm.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.first-btn button{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    background-color: var(--primary);
+    color: var(--heaven);
+    transition: all .4s ease;
+}
+.first-btn button:hover{
+    background-color: var(--heaven);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+
+.second-btn button{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    background-color: var(--secondary);
+    color: var(--heaven);
+    transition: all .4s ease;
+}
+.second-btn button:hover{
+    background-color: var(--heaven);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+
+.section-heading{
+    font-family: "raleway-bold";
+    text-align: center;
+    position: relative;
+    margin-bottom: 6rem;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+.section-heading:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -30px;
+}
+hr{
+    border: 1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+.text-center{
+    text-align: center;
+}
+.text-primary{
+    color: var(--primary);
+}
+.text-pure{
+    color: var(--pure);
+}
+.hori{
+    width: 100%;
+    height: 1px;
+    background-color: var(--ternary);
+}
+/*----------------------------------------------------utility-store end---------------------------------------------------------*/
+
+
+
+
+
+
+
+
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
+header.topbar{
+    background-color: var(--secondary);
+    color: var(--pure);
+    font-family: "raleway-semibold";
+    padding: 0.75rem 0;
+}
+
+header.topbar .auth > div a{
+    color:  var(--pure);
+    text-decoration: none;
+}
+
+header.topbar .auth > div img{
+    margin-right: 0.35rem;
+}
+
+header.topbar .icons a{
+    margin-right: 0.6rem;
+}
+
+header.topbar .auth .divider{
+    padding:  0 1rem;
+}
+
+
+nav .top{
+    padding: 1.5rem 0;
+}
+nav .top .contact h5,
+nav .top .time h5{
+    font-family: "raleway-black";
+    margin-bottom: 0.25rem;
+    font-size: 13px;
+}
+
+nav .top .contact h6,
+nav .top .time h6{
+    font-family: "raleway-medium";
+    letter-spacing: 0.056rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--ternary);
+}
+nav .top .contact img,
+nav .top .time img{
+    margin-right: 1rem;
+}
+
+
+nav .navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "raleway-semibold";
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    transition: all .3s ease;
+}
+
+nav .navbar a.active,
+nav .navbar a:hover{
+    background-color: var(--primary);
+    color: var(--pure);
+}
+
+header.hero{
+    height: 490px;
+    background-image: url(../images/hero.png);
+    background-position: 0% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+header.hero .container{
+    position: relative;
+}
+
+header.hero .welcome span{
+    font-family: "raleway-bold";
+    color: var(--secondary);
+    margin-right: 0.75rem;
+}
+
+header.hero .welcome img{
+    width: 150px;
+}
+header.hero h1{
+    font-family: "raleway-extrabold";
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+}
+
+header.hero h1 span{
+    color: var(--primary);
+}
+
+header.hero p{
+    font-family: "raleway-medium";
+    width: 50%;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+header.hero button:first-child{
+    margin-right: 0.50rem;
+}
+
+header.hero .hero-img{
+    position: absolute;
+    top: -40px;
+    right: 40px;
+}
+
+
+/*  ----------OUR SERVICES STYLING START-----------------------------------------------------  */
+section.our-services{
+    background-color: var(--light);
+    position: relative;
+    z-index: 0;
+}
+
+section.our-services .card-wrapper{
+    margin-right: -2rem;
+    margin-top: 8rem;
+}
+
+section.our-services .service-card{
+    background-color: var(--heaven);
+    text-align: center;
+    padding: 2rem;
+    margin-right: 2rem;
+    padding-top: 4rem;
+    position: relative;
+    border-radius: 4px;
+}
+
+section.our-services .service-card .icon-img{
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+section.our-services .service-card .text-primary h2{
+    color: var(--primary);
+}
+
+section.our-services .service-card h2{
+    font-family: "raleway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+section.our-services .service-card p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+/*  -----------OUR SERVICES STYLING END-----------------------------------------------------  */
+
+
+/*  ------ABOUT FRESH MEAL STYLING START-----------------------------------------------------  */
+section.about-meal img{
+    width: 85%;
+}
+
+section.about-meal h2{
+    font-family: "raleway-bold";
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    text-transform: capitalize;
+}
+
+section.about-meal p{
+    line-height: 1.7;
+    margin-bottom: 4rem;
+}
+/*  ---------ABOUT FRESH MEAL STYLING END-----------------------------------------------------  */
+
+
+/*  ----------TOP PRODUCTS STYLING START-----------------------------------------------------  */
+section{
+    padding: 4rem 0;
+}
+
+section.top-products{
+    background-color: var(--light);
+}
+
+section.top-products .owl-carousel .item{
+    background-color: var(--heaven);
+    padding: 1.5rem 0;
+    border-radius: 4px;
+}
+
+section.top-products .owl-carousel .item .product-img img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom: 1rem;
+}
+
+section.top-products .item .product h2{
+    font-family: "raleway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+
+section.top-products .item .product .stars{
+    margin-bottom: 0.5rem;
+}
+
+section.top-products .item .product .stars img{
+    margin-right: 0.25rem;
+    width: 15px;
+}
+
+section.top-products .item .product .price{
+    font-family: "raleway-medium";
+    color: var(--danger);
+    margin-bottom: 1rem;
+}
+
+section.top-products .item .product button{
+    font-family: "raleway-medium";
+    color: var(--secondary);
+    background: var(--heaven);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    width: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+section.top-products .item .product button:hover{
+    background: var(--primary);
+    color: var(--heaven);
+}
+
+section.top-products .item .product button img{
+    background: var(--primary);
+    padding: 0.50rem;
+    width: 35px;
+    margin-right: 1.2rem;
+}
+section.top-products .container .second-btn{
+    margin-top: 2rem;
+}
+/*  ------TOP PRODUCTS STYLING END-----------------------------------------------------  */
+
+
+
+/*  -----------Big Deal Of The Week STYLING START-----------------------------------------------------  */
+section.our-deal{
+    background: linear-gradient(
+        rgba(35, 43, 56, 0.9),
+        rgba(35, 43, 56, 0.9)
+    ), url(../images/food-table.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section.our-deal .timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -2rem;
+    margin-bottom: 2rem;
+}
+
+section.our-deal .timer div{
+    margin-right: 2rem;
+    width: 150px;
+    height: 150px;
+    background: var(--primary);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.our-deal .timer div span:first-child{
+    font-family: "raleway-semibold";
+    font-size: 2.5rem;
+    color: var(--heaven);
+    margin-bottom: 0.05rem;
+}
+
+section.our-deal .timer div span:last-child{
+    font-size: "raleway-medium";
+    color: var(--heaven)
+}
+/*  --------Big Deal Of The Week STYLING END-----------------------------------------------------  */
+
+
+
+
+/*  ---------LATEST NEWS STYLING START--------------------------------------------  */
+section.latest-news{
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+
+section.latest-news .article-wrapper{
+    margin-right: -2rem;
+}
+
+section.latest-news .article-wrapper .card{
+    margin-right: 2rem;
+    background: var(--heaven);
+    border-radius: 4px;
+}
+
+section.latest-news .article-wrapper .card img{
+    width: 100%;
+}
+
+section.latest-news .article-wrapper .card .card-content{
+    padding: 2rem;
+}
+
+section.latest-news .article-wrapper .card .card-content .post-meta{
+    margin-bottom: 1rem;
+}
+
+section.latest-news .article-wrapper .card .card-content .post-meta .comment-count{
+    margin-left: 1rem;
+}
+
+section.latest-news .article-wrapper .card .card-content h2{
+    font-family: "raleway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+section.latest-news .article-wrapper .card .card-content p{
+    line-height: 1.6;
+    text-align: justify;
+}
+
+section.latest-news .btn-wrapper{
+    margin-top: 2rem;
+}
+/*  ------LATEST NEWS STYLING END-----------------------------------------------------  */
+
+
+
+
+/*  -----SUBCRIPTION STYLING START-----------------------------------------------------  */
+section.subscribe{
+    background: var(--primary);
+}
+
+section.subscribe .container > div:first-child img{
+    width: 90%;
+}
+
+section.subscribe h1{
+    font-family: "raleway-bold";
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+section.subscribe P{
+    font-family: "raleway-medium";
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+section.subscribe .input-wrap{
+    background: var(--heaven);
+    display: flex;
+    padding: 0.3rem;
+    border-radius: 4px;
+}
+
+section.subscribe .input-wrap input{
+    width: 100%;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+section.subscribe .input-wrap button{
+    padding: 0.8rem 2rem;
+    border: none;
+    background: var(--primary);
+    color: var(--pure);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    outline: none;
+}
+
+section.subscribe .input-wrap button:hover{
+    background: var(--secondary);
+}
+/*  -----------SUBCRIPTION STYLING END-----------------------------------------------------  */
+
+
+
+
+/*  ----------CONTACT US STYLING END-----------------------------------------------------  */
+section.contact-us{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+section.contact-us .contact-info-wrapper{
+    padding: 4rem 0;
+}
+
+section.contact-us .contact-info > div > div{
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+section.contact-us .contact-info > div > div img{
+    margin-right: 1rem;
+}
+
+section.contact-us .contact-info > div > div > div{
+    flex-direction: column;
+}
+
+section.contact-us .contact-info > div > div > div span:first-child{
+    font-family: "raleway-bold";
+    margin-bottom: 0.25rem;
+}
+/*  -----CONTACT US STYLING END-----------------------------------------------------  */
+
+
+
+
+/*  ------FOOTER STYLING START-----------------------------------------------------  */
+footer{
+    background-color: var(--footer);
+    padding: 4rem 0;
+}
+
+footer .container{
+    color: var(--pure);
+}
+
+footer .box{
+    flex: 1;
+    margin-right: 2rem;
+    text-align: center;
+}
+
+footer .box h3{
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer .box p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+footer .box ul{
+    list-style-type: none;
+}
+
+footer .box li{
+    margin-bottom: 1rem;
+}
+
+footer .box ul li a{
+    color: var(--pure);
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+footer .box ul li a:hover{
+    color: var(--primary);
+}
+
+footer .box:nth-child(3) > div{
+    display: flex;
+    justify-content: center;
+}
+
+footer .box:nth-child(3){
+    text-align: left;
+}
+
+footer .box:nth-child(3) h3{
+    text-align: center;
+}
+
+footer .box:nth-child(3) > div img{
+    margin-right: 1rem;
+}
+
+footer .box:nth-child(3) ul li{
+    margin-bottom: 1.5rem;
+}
+
+footer .instagram-api img{
+    width: 100%;
+    object-fit: cover;
+}
+
+footer .instagram-api .post-wrap{
+    flex-wrap: wrap;
+}
+
+footer .instagram-api .post-wrap > div{
+    width: calc(1/3*100% - (1 - 1/3)*10px);
+    margin-bottom: 10px;
+}
+
+footer.copy-right{
+    padding: 1rem 0;
+    background-color: var(--secondary);
+    color: var(--pure);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+footer.copy-right a{
+    color: var(--primary);
+}
+/*  ------FOOTER STYLING END-----------------------------------------------------  */
+
+
+
+
+
+/*------quiry fo mobile start------*/
+.site-main-wrapper{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.hamberger{
+    position: fixed;
+    top: 40px;
+    right: 60px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+.hamberger img,
+.times img{
+    width: 45px;
+    background-color: var(--danger);
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid var(--pure);
+}
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light);
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+    overflow-y: auto;
+    padding: 1rem;
+}
+.open{
+    transform: translateX(0);
+}
+.times{
+    position: fixed;
+    top: 30px;
+    right: 60px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.mobile-nav .cart-svg{
+    margin-top: 1rem;
+}
+.mobile-nav .cart-svg img{
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+}
+.mobile-nav .cart-svg a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-family: 'raleway-bold';
+}
+.mobile-nav ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1.30rem;
+}
+.mobile-nav ul li{
+    margin-bottom: 1rem;
+}
+.mobile-nav ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--secondary);
+    font-family: 'raleway-medium';
+    transition: all .3s ease;
+}
+.mobile-nav ul li a:hover{
+    color: var(--primary);
+    text-decoration: underline;
+}
+.mobile-nav .contact{
+    margin: 2rem 0 1rem 0;
+}
+.mobile-nav .contact img,
+.mobile-nav .time img{
+    margin-right: 1rem;
+}
+.mobile-nav .contact h5,
+.mobile-nav .time h5{
+    font-family: 'raleway-bold';
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+.mobile-nav .contact h6,
+.mobile-nav .time h6{
+    font-size: 0.75rem;
+    font-family: 'raleway-bold';
+}
+/*------quiry fo mobile end------*/
+
+
+
+
+/*---MEDIA QUIRY start---*/
+@media (max-width: 992px){
+    .hamberger{
+        display: block;
+    }
+    header.topbar,
+    nav{
+        display: none;
+    }
+    header.hero .hero-img{
+        right: -100px;
+        top: 60px;
+    }
+    .latest-news .article-wrapper{
+        flex-direction: column;
+    }
+    .latest-news .article-wrapper .card{
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+    footer .instagram-api .post-wrap > div{
+        width: calc(1/2*100% - (1 - 1/3)*10px);
+    }
+}
+
+
+@media (max-width: 768px){
+    .about-meal .about-meal-wrap{
+        flex-direction: column;
+    }
+    .about-meal .about-meal-wrap img{
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    section.our-services .card-wrapper{
+        flex-direction: column;
+    }
+    section.our-services .card-wrapper .service-card{
+        margin-bottom: 6rem;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container .box ul{
+        padding-left: 0;
+    }
+    footer .container .box{
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+    footer .box:nth-child(3) h3{
+        text-align: left;
+    }
+    footer .box:nth-child(3) > div{
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 576px){
+    header.hero .hero-img{
+        right: -235px;
+        top: 150px;
+    }
+    header.hero{
+        margin-top: 3rem;
+    }
+    section.our-deal .timer > div{
+        margin-right: 0.50rem;
+    }
+    section.our-deal .timer{
+        margin-right: -0.50rem;
+    }
+    section.latest-news .article-wrapper .card .card-content{
+        padding-left: 0.60rem;
+        padding-right: 0.60rem;
+    }
+    section.subscribe .container{
+        flex-direction: column;
+    }
+}
+/*---MEDIA QUIRY start---*/
